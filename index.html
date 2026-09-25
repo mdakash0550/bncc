@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BNCC রাজশাহী কলেজ – ভর্তি সিলেবাস গাইড</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a5e2a;
+      --primary-dark: #0f3d1a;
+      --secondary: #b22222;
+      --bg: #f4f7f5;
+      --card: #ffffff;
+      --text: #1e2a1e;
+      --muted: #4a5a4a;
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+      --radius: 14px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Hind Siliguri', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding-bottom: 40px;
+    }
+
+    /* হেডার */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #fff;
+      padding: 40px 20px 32px;
+      text-align: center;
+      border-bottom: 6px solid var(--secondary);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    header p {
+      font-size: 1.05rem;
+      opacity: 0.92;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--secondary);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    /* মূল কন্টেইনার */
+    main {
+      max-width: 860px;
+      margin: -20px auto 0;
+      padding: 0 16px;
+    }
+
+    section {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px 24px;
+      margin-bottom: 24px;
+      border: 1px solid #e6ede6;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px dashed #d0e0d0;
+      padding-bottom: 10px;
+    }
+
+    h2 .icon {
+      font-size: 1.5rem;
+    }
+
+    /* ধাপের কার্ড */
+    .stage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .stage-card {
+      background: #f0f7f0;
+      border-left: 5px solid var(--primary);
+      border-radius: 10px;
+      padding: 16px 18px;
+      transition: transform 0.2s;
+    }
+
+    .stage-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .stage-card h3 {
+      font-size: 1.05rem;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+    }
+
+    .stage-card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* অ্যাকর্ডিয়ন */
+    details {
+      background: #fafcfa;
+      border: 1px solid #dce8dc;
+      border-radius: 10px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+
+    details[open] {
+      box-shadow: 0 2px 12px rgba(26, 94, 42, 0.1);
+      border-color: #b8d4b8;
+    }
+
+    summary {
+      padding: 14px 18px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--primary-dark);
+      background: #f0f7f0;
+      transition: background 0.2s;
+    }
+
+    summary:hover {
+      background: #e4f0e4;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '▼';
+      font-size: 0.75rem;
+      color: var(--primary);
+      transition: transform 0.3s;
+    }
+
+    details[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .details-body {
+      padding: 16px 20px 20px;
+      border-top: 1px solid #e0ece0;
+    }
+
+    .details-body ul {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+
+    .details-body li {
+      margin-bottom: 5px;
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e8f5e8;
+      color: var(--primary-dark);
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 2px 10px;
+      border-radius: 12px;
+      margin-right: 6px;
+      margin-bottom: 4px;
+    }
+
+    .note {
+      background: #fff8e6;
+      border-left: 4px solid #f0b400;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      color: #5a4a1a;
+      margin-top: 16px;
+    }
+
+    /* টিপস */
+    .tips-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .tips-list li {
+      padding: 10px 0 10px 36px;
+      position: relative;
+      border-bottom: 1px solid #eef3ee;
+      font-size: 0.98rem;
+    }
+
+    .tips-list li:last-child {
+      border-bottom: none;
+    }
+
+    .tips-list li::before {
+      content: '✔';
+      position: absolute;
+      left: 8px;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    /* ফুটার */
+    footer {
+      text-align: center;
+      padding: 24px 16px 10px;
+      font-size: 0.9rem;
+      color: #6b7a6b;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* রেসপন্সিভ */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      section {
+        padding: 20px 16px;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      .stage-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- হেডার -->
+  <header>
+    <div class="badge">BNCC ভর্তি গাইড</div>
+    <h1>রাজশাহী কলেজ বিএনসিসি</h1>
+    <p>ভর্তি পরীক্ষার সিলেবাস ও প্রস্তুতি – সহজ বাংলায়</p>
+  </header>
+
+  <main>
+
+    <!-- পরীক্ষার ধাপ -->
+    <section>
+      <h2><span class="icon">📌</span> পরীক্ষার ধাপসমূহ</h2>
+      <div class="stage-grid">
+        <div class="stage-card">
+          <h3>১. লিখিত পরীক্ষা</h3>
+          <p>বাংলা, ইংরেজি, গণিত ও সাধারণ জ্ঞান – MCQ ও সংক্ষিপ্ত প্রশ্ন</p>
+        </div>
+        <div class="stage-card">
+          <h3>২. শারীরিক পরীক্ষা</h3>
+          <p>দৌড়, লাফ, পুশ-আপ, সিট-আপ ইত্যাদি</p>
+        </div>
+        <div class="stage-card">
+          <h3>৩. মৌখিক পরীক্ষা</h3>
+          <p>ভাইভা – সাধারণ জ্ঞান, ব্যক্তিত্ব ও আত্মবিশ্বাস যাচাই</p>
+        </div>
+        <div class="stage-card">
+          <h3>৪. চূড়ান্ত নির্বাচন</h3>
+          <p>সব ধাপে উত্তীর্ণদের মধ্য থেকে ক্যাডেট নির্বাচন</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- বাংলা সিলেবাস -->
+    <section>
+      <h2><span class="icon">📖</span> বাংলা অংশের সিলেবাস</h2>
+      <p style="margin-bottom: 16px; color: var(--muted);">
+        মূলত এসএসসি (নবম-দশম শ্রেণি) এনসিটিবি পাঠ্যবই অনুসরণ করলেই হবে।
+      </p>
+
+      <details open>
+        <summary>📝 গদ্য (বাংলা ১ম পত্র)</summary>
+        <div class="details-body">
+          <ul>
+            <li>অতিথির স্মৃতি</li>
+            <li>ভাব ও কাজ</li>
+            <li>পড়ে পাওয়া</li>
+            <li>বাংলা নববর্ষ</li>
+            <li>বাংলা ভাষার জন্মকথা</li>
+            <li>গণঅভ্যুত্থানের কথা</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>✍️ পদ্য (বাংলা ১ম পত্র)</summary>
+        <div class="details-body">
+          <ul>
+            <li>বঙ্গভূমির প্রতি</li>
+            <li>দুই বিঘা জমি</li>
+            <li>আবার আসিব ফিরে</li>
+            <li>নদীর স্বপ্ন</li>
+            <li>রূপাই</li>
+            <li>একুশের গান</li>
+          </ul>
+          <p style="margin-top: 8px; font-size: 0.9rem; color: var(--muted);">
+            কবিতার মূলভাব, কবির পরিচয় ও গুরুত্বপূর্ণ চরণ মনে রাখতে হবে।
+          </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>🔤 ব্যাকরণ (বাংলা ২য় পত্র)</summary>
+        <div class="details-body">
+          <ul>
+            <li>ভাষা, মাতৃভাষা ও রাষ্ট্রভাষা</li>
+            <li>ধ্বনি ও বর্ণ</li>
+            <li>সন্ধি</li>
+            <li>শব্দ ও পদ</li>
+            <li>লিঙ্গান্তরের নিয়ম</li>
+            <li>ধাতু ও ক্রিয়াপদ</li>
+            <li>বাক্য গঠন</li>
+            <li>সমার্থক শব্দ, বিপরীত শব্দ</li>
+            <li>বাগধারা, অভিধান</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>📋 সম্ভাব্য প্রশ্নের ধরন</summary>
+        <div class="details-body">
+          <p>সাধারণত <strong>বহুনির্বাচনি (MCQ)</strong> এবং <strong>সংক্ষিপ্ত প্রশ্ন</strong> আসে।</p>
+          <p style="margin-top: 6px;">অনেকে বাংলা ২য় পত্রের <strong>সারাংশ/সারমর্ম, ভাব-সম্প্রসারণ, অনুচ্ছেদ</strong> থেকেও প্রশ্ন পেয়ে থাকেন।</p>
+        </div>
+      </details>
+
+      <div class="note">
+        💡 <strong>পরামর্শ:</strong> রাজশাহী কলেজ বিএনসিসি ইউনিটের ওয়েবসাইট বা নোটিশ বোর্ডে সিলেবাস সংক্রান্ত নির্দিষ্ট তথ্য থাকলে সেটি অবশ্যই দেখে নিও। নিয়মিত বাংলা পত্রিকা পড়া এবং বিগত বছরের প্রশ্ন সমাধান করলে সুবিধা পাবে।
+      </div>
+    </section>
+
+    <!-- অন্যান্য বিষয় -->
+    <section>
+      <h2><span class="icon">📚</span> অন্যান্য বিষয় (সংক্ষেপে)</h2>
+
+      <details>
+        <summary>🇬🇧 ইংরেজি</summary>
+        <div class="details-body">
+          <ul>
+            <li>Grammar: Tense, Voice, Narration, Preposition, Article</li>
+            <li>Vocabulary: Synonyms, Antonyms, Idioms</li>
+            <li>Comprehension ও Paragraph Writing</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>➗ গণিত</summary>
+        <div class="details-body">
+          <ul>
+            <li>পাটিগণিত: শতকরা, লাভ-ক্ষতি, অনুপাত, গড়</li>
+            <li>বীজগণিত: সমীকরণ, সূচক, লগারিদম</li>
+            <li>জ্যামিতি: ত্রিভুজ, চতুর্ভুজ, বৃত্ত</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>🌍 সাধারণ জ্ঞান</summary>
+        <div class="details-body">
+          <ul>
+            <li>বাংলাদেশ ও আন্তর্জাতিক বিষয়াবলি</li>
+            <li>মুক্তিযুদ্ধ ও স্বাধীনতা</li>
+            <li>বিজ্ঞান ও প্রযুক্তি</li>
+            <li>খেলাধুলা, সংস্কৃতি, চলমান ঘটনা</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <!-- প্রস্তুতির টিপস -->
+    <section>
+      <h2><span class="icon">🎯</span> প্রস্তুতির টিপস</h2>
+      <ul class="tips-list">
+        <li>বিগত বছরের প্রশ্ন সংগ্রহ করে সমাধান করো।</li>
+        <li>প্রতিদিন অন্তত ২ ঘণ্টা নিয়মিত পড়ার অভ্যাস গড়ো।</li>
+        <li>শারীরিক ফিটনেস ধরে রাখতে সকালে দৌড় ও ব্যায়াম করো।</li>
+        <li>নিজের পরিচয়, লক্ষ্য ও বিএনসিসি সম্পর্কে প্রাথমিক ধারণা তৈরি রাখো।</li>
+        <li>ভাইভার জন্য আত্মবিশ্বাসী ও বিনয়ী থাকো।</li>
+        <li>অফিসিয়াল নোটিশ নিয়মিত চেক করো – তারিখ ও সময় পরিবর্তন হতে পারে।</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>⚠️ এটি একটি সাধারণ গাইড। সঠিক ও সর্বশেষ তথ্যের জন্য <a href="#" target="_blank">রাজশাহী কলেজ বিএনসিসি ইউনিট</a> বা <a href="https://bncc.gov.bd" target="_blank">বিএনসিসি অফিসিয়াল ওয়েবসাইট</a> দেখুন।</p>
+    <p style="margin-top: 6px;">তৈরি: সহজ বাংলায় বিএনসিসি প্রস্তুতি</p>
+  </footer>
+
+</body>
+</html>
